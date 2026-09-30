@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>车库防汛挡板部署与归位系统</title>
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">▌</span>
+    <b>车库防汛挡板</b><span class="brand-sub">部署与归位</span>
+  </div>
+  <div class="topbar-right">
+    <label class="staff-pick">
+      当前岗位
+      <select id="staffPick"></select>
+    </label>
+    <span id="roundPill" class="pill pill-blue">无预警</span>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="sidenav" id="sidenav">
+    <a href="#/dashboard"><span>📋</span>预警看板</a>
+    <a href="#/diagram"><span>🗺️</span>入口示意图</a>
+    <a href="#/claim"><span>🧰</span>器材领用</a>
+    <a href="#/install"><span>🔩</span>分段安装</a>
+    <a href="#/water"><span>💧</span>积水观察</a>
+    <a href="#/dismantle"><span>🧽</span>拆除清洗</a>
+    <a href="#/stocktake"><span>📦</span>归架盘点</a>
+  </nav>
+  <main class="content" id="view"></main>
+</div>
+
+<div id="toast" class="toast"></div>
+<div id="photobar" class="photobar hidden">
+  <div class="photobar-info">
+    <label class="cam-btn">
+      📷 拍照
+      <input type="file" id="photoInput" accept="image/*" capture="environment" hidden>
+    </label>
+    <div id="photoPreview" class="photo-preview"></div>
+  </div>
+  <span class="photobar-hint">照片将随下一次确认上传</span>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
