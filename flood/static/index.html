@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>防汛挡板部署与归位系统</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">🌧</span>
+    <div>
+      <h1>地下车库防汛挡板系统</h1>
+      <small>部署 · 封控 · 拆除 · 清洗归架</small>
+    </div>
+  </div>
+  <div class="top-actions">
+    <label class="actor">
+      当前操作人
+      <select id="actor"></select>
+    </label>
+    <span id="alert-pill" class="pill pill-none">无预警</span>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button data-view="dashboard" class="active">预警看板</button>
+  <button data-view="schematic">入口示意图</button>
+  <button data-view="pickup">器材领用</button>
+  <button data-view="install">分段安装</button>
+  <button data-view="water">积水观察</button>
+  <button data-view="removal">拆除清洗</button>
+  <button data-view="rack">归架盘点</button>
+</nav>
+
+<main id="view"></main>
+
+<div id="toast" class="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
